@@ -117,8 +117,13 @@
             function minus_plus(id,input_value,z){
                 var plus_minus= document.getElementById(id);
                 var inputFirst= document.getElementById(input_value).value;
+                if(inputFirst == 0 && z<-1){
+                    var valueFirst= parseFloat(inputFirst) + 0; 
+                }
+                else{
                 var valueFirst= parseFloat(inputFirst) + 1 + z; 
                 document.getElementById(input_value).value = valueFirst;
+                }
             }
         
 
